@@ -98,8 +98,8 @@ def handle_reverse(lst):
 def handle_copy(lst):
 	# TODO: Use the copy() method to create a shallow copy of the list
 	# Print the copied list
-	lst.copy()
-	print(lst)
+	copy_List = lst.copy()
+	print('This is your copy list:', copy_List)
 
 def main():
 	initial_values = input('Enter initial list values (comma-separated): ')
