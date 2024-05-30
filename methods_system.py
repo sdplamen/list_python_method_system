@@ -18,7 +18,7 @@ def handle_append(lst):
 	# TODO: Prompt the user for a value to append to the list
 	# Use the append() method to add the value to the list
 	# Print the updated list
-	val = input('Type a value to add to the list')
+	val = int(input('Type a value to add to the list: '))
 	lst.append(val)
 	print(lst)
 
@@ -26,7 +26,7 @@ def handle_extend(lst):
 	# TODO: Prompt the user for values to extend the list (comma-separated)
 	# Use the extend() method to add these values to the list
 	# Print the updated list
-	val = input('Type a value with comma separated to extend to the list')
+	val = int(input('Type a value with comma separated to extend to the list: '))
 	lst.extend(val)
 	print(lst)
 
@@ -34,8 +34,8 @@ def handle_insert(lst):
 	# TODO: Prompt the user for an index and a value to insert at that index
 	# Use the insert() method to add the value at the specified index
 	# Print the updated list
-	ind = input('Type an index to insert value to the list')
-	val = input('Type a value to insert value to the list at that index')
+	ind = int(input('Type an index to insert value to the list: '))
+	val = int(input('Type a value to insert value to the list at that index: '))
 	lst.index(val, ind)
 	print(lst)
 
@@ -45,7 +45,7 @@ def handle_remove(lst):
 	# Use the remove() method to delete the first occurrence of the value
 	# Handle the case where the value is not found in the list
 	# Print the updated list
-	val = input('Type a value to remove from the list')
+	val = int(input('Type a value to remove from the list: '))
 	lst.remove(val)
 	print(lst)
 
@@ -54,8 +54,8 @@ def handle_pop(lst):
 	# Use the pop() method to remove the item at the specified index or the last item if no index is provided
 	# Handle the case where the index is out of range
 	# Print the updated list
-	val = input('Type an index to pop value from the list or leave empty to pop the last')
-	if len(val) == 0:
+	val = int(input('Type an index to pop value from the list\nor leave empty to pop the last: '))
+	if not val:
 		lst.pop()
 	else:
 		lst.pop(val)
@@ -74,7 +74,7 @@ def handle_index(lst):
 	# Use the index() method to find the index of the value
 	# Handle the case where the value is not found in the list
 	# Print the index of the value
-	val = input('Type a value to find its index in the list')
+	val = int(input('Type a value to find its index in the list: '))
 	if lst.index(val) not in lst:
 		print('The index isn\'t in the list')
 	else:
@@ -86,7 +86,7 @@ def handle_count(lst):
 	# TODO: Prompt the user for a value to count its occurrences in the list
 	# Use the count() method to count how many times the value appears in the list
 	# Print the count of the value
-	val = input('Type a value to count its occurrences in the list')
+	val = int(input('Type a value to count its occurrences in the list: '))
 	lst.count(val)
 	print(lst)
 
