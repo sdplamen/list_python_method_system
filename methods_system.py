@@ -25,7 +25,7 @@ def handle_extend(lst):
 	# TODO: Prompt the user for values to extend the list (comma-separated)
 	# Use the extend() method to add these values to the list
 	# Print the updated list
-	val = input('Type a value with comma separated to extend to the list: ').split(',')
+	val = input('Type a value (comma-separated) to extend to the list: ').split(',')
 	lst.extend(val)
 	print(lst)
 
