@@ -18,7 +18,7 @@ def handle_append(lst):
 	# TODO: Prompt the user for a value to append to the list
 	# Use the append() method to add the value to the list
 	# Print the updated list
-	val = int(input('Type a value to add to the list: '))
+	val = input('Type a value to add to the list: ')
 	lst.append(val)
 	print(lst)
 
@@ -26,7 +26,7 @@ def handle_extend(lst):
 	# TODO: Prompt the user for values to extend the list (comma-separated)
 	# Use the extend() method to add these values to the list
 	# Print the updated list
-	val = int(input('Type a value with comma separated to extend to the list: '))
+	val = input('Type a value with comma separated to extend to the list: ').split(',')
 	lst.extend(val)
 	print(lst)
 
@@ -35,8 +35,8 @@ def handle_insert(lst):
 	# Use the insert() method to add the value at the specified index
 	# Print the updated list
 	ind = int(input('Type an index to insert value to the list: '))
-	val = int(input('Type a value to insert value to the list at that index: '))
-	lst.index(val, ind)
+	val = input('Type a value to insert to the list at that index: ')
+	lst.insert(ind, val)
 	print(lst)
 
 
