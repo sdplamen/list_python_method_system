@@ -1,5 +1,5 @@
 def display_menu():
-	print("\nChoose a list operation:")
+	print("Choose a list operation:")
 	print("1. Append")
 	print("2. Extend")
 	print("3. Insert")
@@ -12,7 +12,6 @@ def display_menu():
 	print("10. Reverse")
 	print("11. Copy")
 	print("12. Exit")
-
 
 def handle_append(lst):
 	# TODO: Prompt the user for a value to append to the list
@@ -39,13 +38,12 @@ def handle_insert(lst):
 	lst.insert(ind, val)
 	print(lst)
 
-
 def handle_remove(lst):
 	# TODO: Prompt the user for a value to remove from the list
 	# Use the remove() method to delete the first occurrence of the value
 	# Handle the case where the value is not found in the list
 	# Print the updated list
-	val = int(input('Type a value to remove from the list: '))
+	val = input('Type a value to remove from the list: ')
 	lst.remove(val)
 	print(lst)
 
@@ -61,49 +59,41 @@ def handle_pop(lst):
 		lst.pop(val)
 	print(lst)
 
-
 def handle_clear(lst):
 	# TODO: Use the clear() method to remove all items from the list
 	# Print the updated list
 	lst.clear()
 	print(lst)
 
-
 def handle_index(lst):
 	# TODO: Prompt the user for a value to find its index
 	# Use the index() method to find the index of the value
 	# Handle the case where the value is not found in the list
 	# Print the index of the value
-	val = int(input('Type a value to find its index in the list: '))
-	if lst.index(val) not in lst:
+	val = input('Type a value to find its index in the list: ')
+	if not lst.index(val):
 		print('The index isn\'t in the list')
 	else:
-		lst.index(val)
-		print(lst)
-
+		print(lst.index(val))
 
 def handle_count(lst):
 	# TODO: Prompt the user for a value to count its occurrences in the list
 	# Use the count() method to count how many times the value appears in the list
 	# Print the count of the value
-	val = int(input('Type a value to count its occurrences in the list: '))
-	lst.count(val)
-	print(lst)
-
+	val = input('Type a value to count its occurrences in the list: ')
+	print(lst.count(val))
 
 def handle_sort(lst):
 	# TODO: Use the sort() method to sort the list in ascending order
 	# Print the updated list
-	lst.sort()
+	lst.sort(key=int)
 	print(lst)
-
 
 def handle_reverse(lst):
 	# TODO: Use the reverse() method to reverse the order of the list
 	# Print the updated list
-	lst.sort(reverse=True)
+	lst.sort(key=int, reverse=True)
 	print(lst)
-
 
 def handle_copy(lst):
 	# TODO: Use the copy() method to create a shallow copy of the list
@@ -111,14 +101,13 @@ def handle_copy(lst):
 	lst.copy()
 	print(lst)
 
-
 def main():
-	initial_values = input("Enter initial list values (comma-separated): ")
+	initial_values = input('Enter initial list values (comma-separated): ')
 	lst = initial_values.split(',')
 
 	while True:
 		display_menu()
-		choice = input("Enter your choice (1-12): ")
+		choice = input('Enter your choice (1-12): ')
 		if choice == '1':
 			handle_append(lst)
 		elif choice == '2':
@@ -142,10 +131,10 @@ def main():
 		elif choice == '11':
 			handle_copy(lst)
 		elif choice == '12':
-			print("Exiting the application.")
+			print('Exiting the application.')
 			break
 		else:
-			print("Invalid choice. Please try again.")
+			print('Invalid choice. Please try again.')
 
 if __name__ == "__main__":
 	main()
