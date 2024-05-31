@@ -92,7 +92,7 @@ def handle_sort(lst):
 def handle_reverse(lst):
 	# TODO: Use the reverse() method to reverse the order of the list
 	# Print the updated list
-	lst.sort(key=int, reverse=True)
+	lst.reverse()
 	print(lst)
 
 def handle_copy(lst):
